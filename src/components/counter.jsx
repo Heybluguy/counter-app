@@ -17,9 +17,9 @@ class Counter extends Component {
 	// 	);
 	// }
 
-	handleIncrement() {
-		console.log('Increment Clicked', this.state.count);
-	}
+	handleIncrement = () => {
+		console.log('Increment Clicked', this);
+	};
 
 	render() {
 		return (
@@ -31,9 +31,6 @@ class Counter extends Component {
 				>
 					Increment
 				</button>
-
-				{this.state.tags.length === 0 && <p>Please create a new tag!</p>}
-				{this.renderTags()}
 			</div>
 		);
 	}
